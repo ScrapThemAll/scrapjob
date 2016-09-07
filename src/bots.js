@@ -9,6 +9,11 @@ function safeCheck(botName) {
 
 function main(name) {
 	safeCheck(name);
+	try {
+		return require(`./sites/${name}/${name}`);
+	} catch (err) {
+		throw new Error('Bot does not exist');
+	}
 }
 
 export default main;
