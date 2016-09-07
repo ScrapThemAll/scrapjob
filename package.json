@@ -1,0 +1,53 @@
+{
+  "name": "allbots",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "xo",
+    "test": "nyc ava --verbose",
+    "build": "babel --copy-files --out-dir dist --ignore *.test.js src",
+    "validate": "npm-run-all --parallel lint test build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ScrapThemAll/scrapjob-bot.git"
+  },
+  "keywords": [
+    "bots",
+    "jobs",
+    "job board"
+  ],
+  "author": "Phung Eric <superphung44@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ScrapThemAll/scrapjob-bot/issues"
+  },
+  "homepage": "https://github.com/ScrapThemAll/scrapjob-bot#readme",
+  "devDependencies": {
+    "ava": "0.16.0",
+    "babel-cli": "6.14.0",
+    "babel-polyfill": "6.13.0",
+    "babel-preset-es2015": "6.14.0",
+    "babel-register": "6.14.0",
+    "ghooks": "1.3.2",
+    "npm-run-all": "3.1.0",
+    "nyc": "8.1.0",
+    "xo": "0.16.0"
+  },
+	"babel": {
+		"presets": [
+			"es2015"
+		]
+  },
+	"ava": {
+		"require": [
+			"./test/helpers/setup.js"
+		]
+	},
+  "config": {
+    "ghooks": {
+      "pre-commit": "npm run validate"
+    }
+  }
+}
