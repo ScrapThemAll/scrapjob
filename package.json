@@ -2,7 +2,7 @@
   "name": "scrapjob",
   "version": "0.0.0",
   "description": "Get job offers from your favorite company",
-  "main": "index.js",
+  "main": "dist/bots.js",
   "scripts": {
     "commit": "git-cz",
     "lint": "xo",
@@ -30,7 +30,7 @@
   "bugs": {
     "url": "https://github.com/ScrapThemAll/scrapjob-bot/issues"
   },
-  "homepage": "https://github.com/ScrapThemAll/scrapjob-bot#readme",
+  "homepage": "https://github.com/ScrapThemAll/scrapjob#readme",
   "devDependencies": {
     "ava": "0.16.0",
     "babel-cli": "6.14.0",
