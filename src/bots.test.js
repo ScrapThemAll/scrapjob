@@ -30,6 +30,4 @@ test('bot does not exit', t => {
 test('bot canalplus', async t => {
 	const botCanalplus = bots('canalplus');
 	t.true(typeof botCanalplus.scrap === 'function');
-	const jobs = await botCanalplus.scrap();
-	t.truthy(jobs.length);
 });
