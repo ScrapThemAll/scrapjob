@@ -7,7 +7,10 @@ node_js: 6
 branches:
   only:
     - master
+notifications:
+  email: false
 script:
   - npm run validate
 after_success:
   - npm run report-coverage
+  - npm run release
