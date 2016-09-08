@@ -1,7 +1,7 @@
 {
-  "name": "allbots",
+  "name": "scrapjob",
   "version": "0.0.0",
-  "description": "",
+  "description": "Get job offers from your favorite company",
   "main": "index.js",
   "scripts": {
     "commit": "git-cz",
